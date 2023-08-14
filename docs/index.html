@@ -7,9 +7,30 @@
     <title>Stock Search</title>
 </head>
 <body>
-    <h1>Search Stocks</h1>
-    <input type="text" id="search" placeholder="Enter stock symbol">
-    <button id="searchButton">Search</button>
+    <header>
+        <h1>Stock Screener</h1>
+        <nav>
+            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="search">
+            <h2>Search Stocks</h2>
+            <input type="text" id="search" placeholder="Enter stock symbol">
+            <button id="searchButton">Search</button>
+        </section>
+        <section class="results">
+            <h2>Search Results</h2>
+            <div id="stockResults"></div>
+        </section>
+        <section class="chart">
+            <h2>Stock Chart</h2>
+            <div id="stockChart"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Your Company Name</p>
+    </footer>
     <script src="search.js"></script>
 </body>
 </html>
