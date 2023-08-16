@@ -41,7 +41,14 @@ def historical(symbol):
     data = fetch_from_iex(endpoint)
     return jsonify(data)
 
+# Route to search for stock symbols
+@app.route('/search/<query>')
+def search_stocks(query):
+    endpoint = 'ref-data/symbols'
+    data = fetch_from_iex(endpoint)
+    suggestions = [stock for stock in data if stock['symbol'].startswith(query.upper())][:10]
+    return jsonify(suggestions)
+
 # Run the Flask app if this file is executed directly
 if __name__ == '__main__':
     app.run(debug=True)
-

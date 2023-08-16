@@ -1,5 +1,3 @@
-const IEX_TOKEN = 'YOUR_API_TOKEN';
-
 function searchStocks(query) {
   // If the query is empty, hide the autocomplete suggestions
   if (query === '') {
@@ -7,9 +5,9 @@ function searchStocks(query) {
     return;
   }
 
-  // Construct the API URL with the query and token
-  const url = `https://cloud.iexapis.com/stable/ref-data/symbols?token=${IEX_TOKEN}`;
-
+   // Construct the URL to point to your Flask backend
+  const url = `/search/${query}`;
+  
   // Fetch the data from the API
   fetch(url)
     .then((response) => response.json())
