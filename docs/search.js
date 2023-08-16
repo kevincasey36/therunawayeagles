@@ -1,3 +1,5 @@
+const IEX_TOKEN = 'YOUR_API_TOKEN';
+
 function searchStocks(query) {
   // If the query is empty, hide the autocomplete suggestions
   if (query === '') {
