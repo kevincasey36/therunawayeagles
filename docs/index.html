@@ -16,7 +16,8 @@
     <main>
         <section class="search">
             <h2>Search Stocks</h2>
-            <input type="text" id="search" placeholder="Enter stock symbol" onkeyup="searchStocks(this.value)">
+            <input type="text" id="search" placeholder="Enter stock symbol">
+            <button id="searchButton" onclick="handleSearch()">Search</button>
             <div id="autocomplete"></div>
         </section>
         <section class="results">
